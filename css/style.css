@@ -245,3 +245,17 @@ body::before {
 .text-bold {
    font-weight: 800;
 }
+
+@media (max-width: 416px) {
+   .header .nav a {
+      padding: 1.3rem 0.95rem;
+   }
+
+   .card-title {
+      font-size: 0.8rem;
+   }
+
+   .card-title::before {
+      bottom: 33px;
+   }
+}
