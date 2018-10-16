@@ -1,0 +1,247 @@
+/*********** Basic reset ***********/
+* {
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+   font-family: 'Josefin Slab', sans-serif;
+}
+
+body {
+   background-image: url('../img/background.jpg');
+   background-position: center;
+   background-attachment: fixed;
+   background-repeat: no-repeat;
+   background-size: cover;
+}
+
+/*********** Dark overlay for background image ***********/
+
+body::before {
+   z-index: -1;
+   content: '';
+   position: fixed;
+   top: 0;
+   bottom: 0;
+   left: 0;
+   right: 0;
+   display: block;
+   background-color: rgba(0, 0, 0, 0.35);
+}
+
+/*********** Header ***********/
+
+.header h1 {
+   color: #fff;
+   text-transform: capitalize;
+   text-align: center;
+   font-weight: 700;
+   letter-spacing: 1.5px;
+   margin-top: 1rem;
+}
+
+.header p {
+   color: #fff;
+   text-transform: uppercase;
+   text-align: center;
+   font-weight: 100;
+   font-family: 'Roboto', sans-serif;
+   font-size: 0.9rem;
+   letter-spacing: 2px;
+}
+
+.header .nav {
+   display: flex;
+   justify-content: center;
+   background: rgba(240, 240, 240, 0.95);
+}
+
+.header .nav a {
+   text-transform: uppercase;
+   padding: 1.3rem 1.6rem;
+   color: rgb(140, 140, 140);
+   text-decoration: none;
+   font-family: 'Roboto', sans-serif;
+   font-weight: 300;
+   font-size: 0.8rem;
+   letter-spacing: 1.7px;
+}
+
+.header .nav a:hover {
+   color: rgb(240, 240, 240);
+   background: rgb(159, 159, 159);
+}
+
+/*********** Bootstrap cards ***********/
+
+.card {
+   padding: 1rem;
+   border-radius: 0;
+   margin-top: 1rem;
+   background: rgba(240, 240, 240, 0.9);
+}
+
+.row:last-child {
+   margin-bottom: 1rem;
+}
+
+.main-title-header {
+   font-weight: 300;
+   color: rgb(140, 140, 140);
+}
+
+.main-title {
+   font-size: 2.2rem;
+   font-weight: 700;
+   color: rgb(51, 51, 51);
+   letter-spacing: 2px;
+}
+
+.main-title::after {
+   content: '';
+   position: absolute;
+   height: 1px;
+   background: rgb(140, 140, 140);
+   bottom: 60px;
+   margin: auto;
+   left: 0;
+   right: 0;
+   width: 200px;
+}
+
+.main-title-footer {
+   text-transform: uppercase;
+   color: rgb(140, 140, 140);
+   letter-spacing: 2px;
+   font-size: 0.8rem;
+}
+
+.card-title {
+   font-size: 1rem;
+   text-align: center;
+   margin-top: 2.5rem;
+   text-transform: uppercase;
+   letter-spacing: 2px;
+   color: rgb(51, 51, 51);
+   position: relative;
+}
+
+.card-title::before {
+   content: '';
+   position: absolute;
+   height: 1px;
+   background: rgb(140, 140, 140);
+   bottom: 37px;
+   margin: auto;
+   left: 0;
+   right: 0;
+   width: 70%;
+}
+
+.card-title::after {
+   content: '';
+   position: absolute;
+   height: 1px;
+   background: rgb(140, 140, 140);
+   bottom: -10px;
+   margin: auto;
+   left: 0;
+   right: 0;
+   width: 70%;
+}
+
+.card-text {
+   color: rgb(51, 51, 51);
+   font-weight: 300;
+   padding-top: 1.5rem;
+   margin-bottom: 0;
+}
+
+.card-text a {
+   text-decoration: none;
+}
+
+.card-text a:hover {
+   color: red;
+}
+
+.card-img {
+   width: 200px;
+}
+
+.card-img img {
+   width: 100%;
+   height: auto;
+}
+
+/*********** Slick carousel, no prev and next arrows, removed margin-bottom from dots, customized dots ***********/
+
+.slick-prev, .slick-next {
+   display: none !important;
+}
+
+.slick-dotted.slick-slider {
+   margin-bottom: 0px;
+}
+
+.slick-dots {
+   bottom: 15px;
+}
+
+.slick-dots li button:before {
+   font-size: 25px;
+   content: '○';
+   opacity: 1;
+   color: #fff;
+}
+
+.slick-dots li.slick-active button:before {
+   font-size: 40px;
+   opacity: 1;
+   content: '•';
+   color: #fff;
+}
+
+/*********** For image responsivness, to expand on large screen ***********/
+
+.carousel-img {
+   height: 480px;
+}
+
+.picture1 {
+   background: url('../img/pic1.jpg') no-repeat center;
+   background-size: cover;
+}
+
+.picture2 {
+   background: url('../img/pic2.jpg') no-repeat center;
+   background-size: cover;
+}
+
+.picture3 {
+   background: url('../img/pic3.jpg');
+   background-size: cover;
+   background-repeat: no-repeat;
+   background-position: center;
+   /* background: url('/img/pic3.jpg') no-repeat center; */
+
+}
+
+/*********** Footer ***********/
+
+.footer {
+   color: rgb(51, 51, 51);
+   padding: 2rem 0;
+   text-align: center;
+   background: rgba(240, 240, 240, 0.9);
+   font-family: 'Roboto', sans-serif;
+}
+
+.footer p {
+   margin: 0;
+}
+
+/*********** Utilities ***********/
+
+.text-bold {
+   font-weight: 800;
+}
